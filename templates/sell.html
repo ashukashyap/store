@@ -1,0 +1,40 @@
+{% extends "account/base.html" %}
+
+
+
+{% block body %}
+
+
+
+
+
+<div class="container">
+    <h1 class="text-center">Add Your Course </h1><br>
+    <p class="text-center">Add Your Subject and become a member of the AshuTechStudy Team you are uploade all categorie
+        Course this website Give all permission this Platform</p>
+
+    <div data-aos="fade-right" class="row mt-4 mb-4 bg-light">
+        <div class="col-md-4 text-center">
+            <h3 class="p-4">Add Your Category Course </h3>
+            <a href="{% url 'core:Cate' %}" class="btn btn-outline-primary m-4">Submit Category</a>
+        </div>
+        <div class="col-md-8">
+            
+        </div>
+    </div>
+
+    <div data-aos="fade-left" class="row mt-4 mb-4 bg-light">
+        <div class="col-md-8">
+           
+        </div>
+
+        <div class="col-md-4 text-center">
+            <h3 class="p-4">Add Category Subject </h3>
+            <a href="{% url 'core:add_book' %}" class="btn btn-outline-primary m-4">Submit Subject</a>
+        </div>
+    </div>
+
+ </div>
+ 
+
+{% endblock body %}

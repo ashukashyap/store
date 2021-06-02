@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+
+{% block body %}
+<h1>here is item list</h1>
+
+{% for item in items %}
+  {{item}}
+{% endfor %}
+
+{% endblock body %}

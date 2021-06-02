@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block extra_head %}
+<style>
+.container {
+    max-width: 400px;
+}
+
+
+</style>
+{% endblock %}
+
+
+
+{% block body %}
+<div class="container mt-3" style="max-width:450px; background-color: rgb(206, 209, 218);">
+<div class="email-from">
+  <form action="{% url 'core:contact' %}" method="POST" id="emailForm" > {% csrf_token %}
+     <div class="form-group">
+          <label for="userName">Name</label>
+          <input type="text" class="form-control" name="name" id="name" placeholder="Your Name">
+          <span class="help-block"></span>
+      </div>
+      <div class="form-group">
+          <label for="userEmail">Email address</label>
+          <input type="email" class="form-control" name="email" id="email" placeholder="Your Email Address">
+          <span class="help-block"></span>
+      </div>
+      <div class="form-group">
+          <label for="subject">Phone Number</label>
+          <input type="phone" class="form-control" name="phone" id="phone" placeholder="Enter Phone Number">
+          <span class="help-block"></span>
+      </div>
+      <div class="form-group">
+          <label for="message">Your Sweet Message</label>
+          <textarea name="text" id="text" rows="6" class="form-control"></textarea>
+          <span class="help-block"></span>
+      </div>
+      <button id="sendMailBtn" data-loading-text="Please Wait..."  type="submit" class="btn btn-success form-control mb-5">Send Request</button>
+  </form>
+</div>
+</div> 
+ 
+
+  {% endblock body %}

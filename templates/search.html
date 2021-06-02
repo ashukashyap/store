@@ -1,0 +1,74 @@
+{% extends "account/base.html" %}
+
+
+{% block title %}  search {% endblock title%}
+
+
+{% block body %}
+<div class="container my-4">
+    <h1>search result</h1>
+    {% if allPosts|length < 1 %}
+    <p> No search Result</p>
+    Your search - <b>{{query}}</b> - did not match any documents.<br>
+
+    Suggestions:
+   <ul>
+       <li> Make sure that all words are spelled correctly.</li>
+       <li>Try different keywords.</li>
+       <li>Try more general keywords</li>
+   </ul>
+    {% endif %}
+
+    {% for post in allPosts %}
+    <section class="product_section layout_padding">
+        <div class="container">
+          <div class="heading_container heading_center">
+            <h2>
+              Our Products
+            </h2>
+          </div>
+          <div class="row">
+          
+            <div class="col-sm-6 col-lg-3 mb-5">
+              <div class="box">
+                <div class="img-box">
+                  <img src="{{post.image.url}}" class="card-img-top">
+                  <a href="{{post.get_absolute_url}}" class="add_cart_btn">
+                    <span>
+                      Add To Cart
+                    </span>
+                  </a>
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    {{post.title}}
+                  </h5>
+                  <div class="product_info">
+                    <h5>
+                      <span>Rs</span> {{post.price}}
+                    </h5>
+                    <div class="star_container">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+            
+            
+            {% endfor %}
+           </div>
+          </div>
+         
+        </div>
+      </section>
+
+{% endblock body %}
+
+
+

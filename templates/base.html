@@ -1,0 +1,164 @@
+{% load static %}
+{% load cart_template_tags %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <link rel="icon" href="{% static 'images/fevicon.png' %}" type="image/gif" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  
+
+  <title>{% block head_title %}{% endblock %}</title>
+
+  
+  {% block extra_head %}
+  {% endblock %}
+
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet"> <!-- range slider -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <!-- font awesome style -->
+  <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  
+  <link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css"
+  rel="stylesheet"
+/>
+  
+  
+  <!-- responsive style -->
+  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+ 
+</head>
+
+{% include "nav.html" %}
+<body>
+  
+
+  {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-dismissible fade show alert-{{ message.tags }}" role="alert" data-mdb-color="warning">
+      {{ message }}
+      <button type="button" class="btn-close" data-mdb-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+  {% endif %}
+
+{% block body %}  
+
+{% endblock body %}
+
+<!-- {% block extra_body %}
+{% endblock %} -->
+
+
+<footer class="site-footer">
+  <div class="footer-top bg-dark text-white-0_6 pt-5 paddingBottom-100">
+    <div class="container"> 
+      <div class="row">
+        <div class="col-lg-3 col-md-9 mt-12">
+            <h4 class="h5 text-white">About Us</h4>
+            <div class="width-3rem bg-primary height-3 mt-3"></div>
+             <div class="margin-y-40">
+               <p class="text-white">knowledge ka adda Certificate courses are a scope of free online courses that are intended to 
+               give preparing  as streamlined and to-the-point as could be allowed.</p>
+             </div>
+        </div>
+
+        <div class="col-lg-3 col-md-9 mt-12">
+          <h4 class="h5 text-white">Contact Us</h4>
+          <div class="width-3rem bg-primary height-3 mt-3"></div>
+          <ul class="list-unstyled marginTop-40">
+            <li class="mb-1"><i class="ti-headphone mr-3"></i><a href="tel:+91 8859346539 " style="color: white;">8859346539</a></li>
+            <li class="mb-1"><i class="ti-email mr-3 " ></i><a href="mailto:info@2ndbookstore.com" style="color: white;">info@2ndbookstore.com</a></li>
+            <li class="mb-3">
+             <div class="media">
+              <i class="ti-location-pin mt-2 mr-3"></i>
+              <div class="media-body">
+                <span class="text-white"> 1st Floor, 2nd book store</span>
+              </div>
+             </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-9 mt-12">
+          <h4 class="h5 text-white">Quick links</h4>
+          <div class="width-3rem bg-primary height-3 mt-3"></div>
+          <ul class="list-unstyled marginTop-40">
+            <li class="mb-2"><a href="#"> <h6 class="text-white">About Us</h6></a></li>
+            <li class="mb-2"><a href="#"><h6 class="text-white">Disclaimer </h6></a></li>
+            <li class="mb-2"><a href="#"><h6 class="text-white">Privacy Policy</h6></a></li>
+            <li class="mb-2"><a href="#"><h6 class="text-white">Terms & Conditions</h6></a></li>
+            <li class="mb-2"><a href="#"><h6 class="text-white">Contact</h6></a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-9 mt-12">
+          <h4 class="h5 text-white">Newslatter</h4>
+          <div class="width-3rem bg-primary height-3 mt-3"></div>
+          <div class="marginTop-40">
+            <p class="mb-4 text-white">Subscribe to get update and information. Don't worry, we won't send spam!</p>
+            <form class="marginTop-30" action="." method="POST">{% csrf_token %}
+              <div class="input-group">
+                <input type="text" placeholder="Enter your email" name="email" id="email" class="form-control  border-white" required="">
+                <div class="input-group-append">
+                  <button class="btn btn-primary  " type="submit">Subscribe</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div> <!-- END row-->
+    </div> <!-- END container-->
+  </div> <!-- END footer-top-->
+
+  <div class="footer-bottom bg-black-0_9 py-5 text-center" style="background-color:  rgb(36, 39, 39);">
+    <div class="container">
+      <p class="text-white-0_5 mb-0" style="color: white;">&copy; 2021 2nd bookstore. All rights reserved. Developed by <a href="http://boostupbusiness.co" target="_blunk">Ashutechstudy.com</a></p>
+    </div>
+  </div>  <!-- END footer-bottom-->
+</footer> <!-- END site-footer -->
+    <div class="scroll-top">
+      <i class="ti-angle-up"></i>
+    </div>
+
+
+
+
+
+
+
+  <!-- jQery -->
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <!-- bootstrap js -->
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <!-- <script src="{% static 'js/bootstrap.js' %}"></script> -->
+  <!-- custom js -->
+  <script src="{% static 'js/custom.js' %}"></script>
+  <script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"
+></script>
+  
+  
+{% block extra_scripts %}
+{% endblock extra_scripts %}
+</body>
+
+</html>
