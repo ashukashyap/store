@@ -173,7 +173,7 @@ button:hover {
 
 <script src="https://js.stripe.com/v3/"></script>
 <script nonce="">  // Create a Stripe client.
-  var stripe = Stripe('sk_test_51IvEGESBLc9B4e1YNODyCpqVZcc7XYTpnkzjfaoReaYJwTiEuuKHtU4yThoLA6HbmVimFaCjnHpE9L80TMb864Zl00A6dQaqZD');
+  var stripe = Stripe('{{STRIPE_PUBLIC_KEY}}');
 
   // Create an instance of Elements.
   var elements = stripe.elements();
