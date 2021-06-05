@@ -243,7 +243,9 @@ class PaymentView(View):
         order = Order.objects.get(user=self.request.user, ordered=False)
         if order.billing_address:
             context = {
-                'order':order
+                'order':order,
+                'STRIPE_PUBLIC_KEY' : settings.STRIPE_PUBLIC_KEY
+                
             }
             return render(self.request,'payment.html',context)
         else:
