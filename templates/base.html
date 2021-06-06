@@ -142,8 +142,7 @@
 
 
 
-    {%  block scripts %}
-    {%  endblock scripts %}
+   
 
   <!-- jQery -->
   <script src="{% static 'js/jquery.min.js' %}"></script>
@@ -157,6 +156,9 @@
   src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"
 ></script>
   
+
+{% block extra_scripts %}
+{% endblock extra_scripts %}
   
 
 </body>

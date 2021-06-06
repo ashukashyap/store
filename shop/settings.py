@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
-from decouple import config
+
 
 
 
@@ -95,10 +95,10 @@ WSGI_APPLICATION = 'shop.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': config('blogdb'),
-        'USER': config('blog_admin'),
-        'PASSWORD': config('testing123'),
-        'HOST': config('localhost'),
+        'NAME': ('blogdb'),
+        'USER': ('blog_admin'),
+        'PASSWORD': ('testing123'),
+        'HOST': ('localhost'),
         'PORT': '',
     }
 }
@@ -167,8 +167,9 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
-STRIPE_PUBLIC_KEY = config('pk_test_51IvEGESBLc9B4e1Y519WAMdnc5dvWH7OcLg9ytRudfuKjnOglaVYxBdlAOXIY56SgFWlsSid67tVz05ggomsVfY500mxMmk7G6')
-STRIPE_SECRET_KEY = config('sk_test_51IvEGESBLc9B4e1YNODyCpqVZcc7XYTpnkzjfaoReaYJwTiEuuKHtU4yThoLA6HbmVimFaCjnHpE9L80TMb864Zl00A6dQaqZD')
+STRIPE_PUBLIC_KEY = ('pk_test_51IvEGESBLc9B4e1Y519WAMdnc5dvWH7OcLg9ytRudfuKjnOglaVYxBdlAOXIY56SgFWlsSid67tVz05ggomsVfY500mxMmk7G6')
+STRIPE_SECRET_KEY = ('sk_test_51IvEGESBLc9B4e1YNODyCpqVZcc7XYTpnkzjfaoReaYJwTiEuuKHtU4yThoLA6HbmVimFaCjnHpE9L80TMb864Zl00A6dQaqZD')
+
 
 # STRIPE_PUBLIC_KEY = ('pk_live_51IvEGESBLc9B4e1YzNwHobXZwpzefEUwsRAWOobKK5rYNT6wzyjkoEnpf1068NAF3LCnMkoHbvgeqjBPGlcbWX8x00dywJaKjz')
 # STRIPE_SECRET_KEY = ('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')

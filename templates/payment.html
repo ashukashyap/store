@@ -169,12 +169,12 @@ button:hover {
 
 {% endblock body %}
 
-{% block scripts %}
+{% block extra_scripts %}
 
 <script src="https://js.stripe.com/v3/"></script>
 <script nonce="">  // Create a Stripe client.
-  var stripe = Stripe('{{pk_test_51IvEGESBLc9B4e1Y519WAMdnc5dvWH7OcLg9ytRudfuKjnOglaVYxBdlAOXIY56SgFWlsSid67tVz05ggomsVfY500mxMmk7G6}}');
-
+  var stripe = Stripe('pk_test_51IvEGESBLc9B4e1Y519WAMdnc5dvWH7OcLg9ytRudfuKjnOglaVYxBdlAOXIY56SgFWlsSid67tVz05ggomsVfY500mxMmk7G6');
+  // pk_test_51IvEGESBLc9B4e1Y519WAMdnc5dvWH7OcLg9ytRudfuKjnOglaVYxBdlAOXIY56SgFWlsSid67tVz05ggomsVfY500mxMmk7G6
   // Create an instance of Elements.
   var elements = stripe.elements();
 
@@ -258,4 +258,4 @@ button:hover {
 
 </script>
 
-{% endblock scripts %}
+{% endblock extra_scripts %}
