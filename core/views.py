@@ -244,6 +244,7 @@ class PaymentView(View):
         if order.billing_address:
             context = {
                 'order':order,
+                'STRIPE_PUBLIC_KEY' : settings.STRIPE_PUBLIC_KEY
                 
             }
             return render(self.request,'payment.html',context)
