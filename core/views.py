@@ -251,7 +251,6 @@ class PaymentView(View):
             messages.warning(self.request,"you have added billing address") 
             return redirect("core:checkout")    
     
-    
     def post(self, *args, **kwargs):
         order = Order.objects.get(user=self.request.user, ordered=False)
         token = self.request.POST.get('stripeToken')
@@ -263,7 +262,7 @@ class PaymentView(View):
                 amount=amount,  # cents
                 currency="INR",
                 source=token,
-                description="my first charge"
+                
                 
             ) 
 
