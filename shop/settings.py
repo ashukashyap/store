@@ -167,7 +167,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
-STRIPE_PUBLIC_KEY = ('pk_test_51IvEGESBLc9B4e1Y519WAMdnc5dvWH7OcLg9ytRudfuKjnOglaVYxBdlAOXIY56SgFWlsSid67tVz05ggomsVfY500mxMmk7G6')
+STRIPE_PUBLIC_KEY = ('pk_live_51IvEGESBLc9B4e1YzNwHobXZwpzefEUwsRAWOobKK5rYNT6wzyjkoEnpf1068NAF3LCnMkoHbvgeqjBPGlcbWX8x00dywJaKjz')
 STRIPE_SECRET_KEY = ('sk_test_51IvEGESBLc9B4e1YNODyCpqVZcc7XYTpnkzjfaoReaYJwTiEuuKHtU4yThoLA6HbmVimFaCjnHpE9L80TMb864Zl00A6dQaqZD')
 
 
